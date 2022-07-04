@@ -34,7 +34,7 @@ Airflow installation on windows 10 with WSL
 > airflow db init
 
 #### 7. Initialize Airflow Database
-> airflow users create --username admin --password your_password --firstname your_first_name --lastname your_last_name --role Admin --email your_email@some.com
+> airflow users create --username admin --password admin --firstname john --lastname doe --role Admin --email john_doe@example.com
 > airflow users list
 
 #### 8. Starting the Airflow scheduler and webserver (-D background)
