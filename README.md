@@ -16,6 +16,7 @@ Airflow installation on windows 10 with WSL
 
 #### 3. Create a virtual environment
 > virtualenv airflow_env
+
 > source airflow_env/bin/activate
 
 #### 4. Set up an environment variable for the Airflow directory
