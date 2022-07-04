@@ -16,6 +16,29 @@ Airflow installation on windows 10 with WSL
 
 #### 3. Create a virtual environment
 > virtualenv airflow_env
-
-#### 4. Activate the environment
 > source airflow_env/bin/activate
+
+#### 4. Set up an environment variable for the Airflow directory
+> sudo nano ~/.bashrc
+> export AIRFLOW_HOME=/mnt/c/Users/username/Documents/airflow
+> cd $AIRFLOW_HOME
+
+#### 5. Installing Airflow and necessary libraries
+> source airflow_env/bin/activate
+> pip3 install apache-airflow[gcp,sentry,statsd]
+> pip3 install pyspark
+> pip3 install sklearn
+
+#### 6. Initialize Airflow Database
+> cd $AIRFLOW_HOME
+> airflow db init
+
+#### 7. Initialize Airflow Database
+> airflow users create --username admin --password your_password --firstname your_first_name --lastname your_last_name --role Admin --email your_email@some.com
+> airflow users list
+
+#### 8. Starting the Airflow scheduler and webserver (-D background)
+> airflow scheduler -D
+> airflow webserver -D
+
+#### 9. Open http://localhost:8080
